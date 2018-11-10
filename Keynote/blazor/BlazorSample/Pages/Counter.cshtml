@@ -1,0 +1,27 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count (Blazor): @currentCount</p>
+
+<p>Current count (JS): <span id="counter-js">0</span></p>
+
+<button class="btn btn-primary"
+        onclick="@IncrementCount">
+    Click me (Blazor)
+</button>
+
+<br /><br />
+
+<button class="btn btn-primary"
+        onclick="incrementJs()">Click me (JS)</button>
+
+@functions {
+
+    int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
